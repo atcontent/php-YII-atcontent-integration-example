@@ -1,0 +1,46 @@
+2012/09/26 14:44:36 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[28000] [1045] Access denied for user 'root'@'localhost' (using password: YES)' in /var/www/atcontent/protected/framework/db/CDbConnection.php:382
+Stack trace:
+#0 /var/www/atcontent/protected/framework/db/CDbConnection.php(331): CDbConnection->open()
+#1 /var/www/atcontent/protected/framework/db/CDbConnection.php(309): CDbConnection->setActive(true)
+#2 /var/www/atcontent/protected/framework/base/CModule.php(388): CDbConnection->init()
+#3 /var/www/atcontent/protected/framework/base/CApplication.php(431): CModule->getComponent('db')
+#4 /var/www/atcontent/protected/framework/db/ar/CActiveRecord.php(624): CApplication->getDb()
+#5 /var/www/atcontent/protected/framework/db/ar/CActiveRecord.php(2311): CActiveRecord->getDbConnection()
+#6 /var/www/atcontent/protected/framework/db/ar/CActiveRecord.php(388): CActiveRecordMetaData->__construct(Object(Publication))
+#7 /var/www/atcontent/protected/framework/web/CActiveDataProvider.php(75): CActiveRecord::model('Publication')
+#8 /var/www/atcontent/protected/controllers/SiteController.php(30): CActiveDataProvider->__construct('Publication')
+#9 /var/www/atcontent/protected/framework/web/actions/CInlineAction.php(50): SiteController->actionIndex()
+#10 /var/www/atcontent/protected/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#11 /var/www/atcontent/protected/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#12 /var/www/atcontent/protected/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /var/www/atcontent/protected/framework/web/CWebApplication.php(283): CController->run('')
+#14 /var/www/atcontent/protected/framework/web/CWebApplication.php(142): CWebApplication->runController('')
+#15 /var/www/atcontent/protected/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#16 /var/www/atcontent/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/atcontent/index.php
+---
+2012/09/26 14:46:51 [error] [exception.CException] exception 'CException' with message 'CAssetManager.basePath "/var/www/atcontent/assets" is invalid. Please make sure the directory exists and is writable by the Web server process.' in /var/www/atcontent/protected/framework/web/CAssetManager.php:128
+Stack trace:
+#0 /var/www/atcontent/protected/framework/web/CAssetManager.php(113): CAssetManager->setBasePath('/var/www/atcont...')
+#1 /var/www/atcontent/protected/framework/web/CAssetManager.php(235): CAssetManager->getBasePath()
+#2 /var/www/atcontent/protected/framework/zii/widgets/CListView.php(188): CAssetManager->publish('/var/www/atcont...')
+#3 /var/www/atcontent/protected/framework/web/CBaseController.php(148): CListView->init()
+#4 /var/www/atcontent/protected/framework/web/CBaseController.php(173): CBaseController->createWidget('zii.widgets.CLi...', Array)
+#5 /var/www/atcontent/protected/views/site/index.php(13): CBaseController->widget('zii.widgets.CLi...', Array)
+#6 /var/www/atcontent/protected/framework/web/CBaseController.php(127): require('/var/www/atcont...')
+#7 /var/www/atcontent/protected/framework/web/CBaseController.php(96): CBaseController->renderInternal('/var/www/atcont...', Array, true)
+#8 /var/www/atcontent/protected/framework/web/CController.php(870): CBaseController->renderFile('/var/www/atcont...', Array, true)
+#9 /var/www/atcontent/protected/framework/web/CController.php(783): CController->renderPartial('index', Array, true)
+#10 /var/www/atcontent/protected/controllers/SiteController.php(33): CController->render('index', Array)
+#11 /var/www/atcontent/protected/framework/web/actions/CInlineAction.php(50): SiteController->actionIndex()
+#12 /var/www/atcontent/protected/framework/web/CController.php(309): CInlineAction->runWithParams(Array)
+#13 /var/www/atcontent/protected/framework/web/CController.php(287): CController->runAction(Object(CInlineAction))
+#14 /var/www/atcontent/protected/framework/web/CController.php(266): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 /var/www/atcontent/protected/framework/web/CWebApplication.php(283): CController->run('')
+#16 /var/www/atcontent/protected/framework/web/CWebApplication.php(142): CWebApplication->runController('')
+#17 /var/www/atcontent/protected/framework/base/CApplication.php(162): CWebApplication->processRequest()
+#18 /var/www/atcontent/index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/atcontent/index.php
+---
